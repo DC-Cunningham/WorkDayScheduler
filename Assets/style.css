@@ -1,0 +1,16 @@
+#time-of-day {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+#event-input {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.alert {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 75px;
+}
