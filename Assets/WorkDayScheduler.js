@@ -20,19 +20,14 @@ function hourColour() {
   $(".time-block").each(function() {
     debugger;
     const timeBlock = $(this);
-    const now = moment().format("H");
-    const span = timeBlock.attr("data-time");
-    console.log("this is now " + now);
-    console.log("this is span " + span);
+    const now = parseInt(moment().format("H"));
+    const span = parseInt(timeBlock.attr("data-time"));
     if (span < now) {
       timeBlock.attr("class", "alert-danger alert text-center time-block");
-      console.log("i Ran for now > span");
     } else if (now == span) {
       timeBlock.attr("class", "alert-primary alert text-center time-block");
-      console.log("i Ran for now == span");
     } else {
       timeBlock.attr("class", "alert-success alert text-center time-block");
-      console.log("i Ran for else");
     }
   });
 }
