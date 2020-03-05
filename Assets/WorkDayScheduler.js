@@ -18,7 +18,6 @@ function liveTime() {
 
 function hourColour() {
   $(".time-block").each(function() {
-    debugger;
     const timeBlock = $(this);
     const now = parseInt(moment().format("H"));
     const span = parseInt(timeBlock.attr("data-time"));
@@ -30,4 +29,24 @@ function hourColour() {
       timeBlock.attr("class", "alert-success alert text-center time-block");
     }
   });
+}
+
+$(".lock").on("click", function() {
+  if ($(this).attr("value") == "locked") {
+    $(this).attr("value", "unlocked");
+    $(this).html('<i class="fa fa-unlock"></i>');
+    clearEntry();
+  } else {
+    $(this).attr("value", "locked");
+    $(this).html('<i class="fa fa-lock"></i>');
+    storeEntry();
+  }
+});
+
+function clearEntry() {
+  console.log("clear entry fired");
+}
+
+function storeEntry() {
+  console.log("store entry fired");
 }
