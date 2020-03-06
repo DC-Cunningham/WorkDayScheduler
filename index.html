@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Assets/style.css" />
-    <script src="https://use.fontawesome.com/cfedf8cd6f.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
@@ -14,13 +14,13 @@
     <title>Work Day Scheduler</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Work Day Scheduler</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
+        <a class="navbar-brand text-center" href="#">Work Day Scheduler</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </nav>
-      <div class="row">
+      <div class="row" id="time-bar">
         <div class="col-6" id="time-of-day">
         </div>
         <div class="card col-2 key">
@@ -52,8 +52,8 @@
                <div class="col-1">
                    <h3>9:00am</h3>
                 </div>
-                <div class="col-9" id="nine-entry">
-                    <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="nine-entry">
+                    <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                     <button class="lock btn btn-dark" value="unlocked">
@@ -67,8 +67,8 @@
                 <div class="col-1">
                     <h3>10:00am</h3>
                 </div>
-                <div class="col-9" id="ten-entry">
-                  <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="ten-entry">
+                  <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                   <button class="lock btn btn-dark" value="unlocked">
@@ -82,8 +82,8 @@
                 <div class="col-1">
                     <h3>11:00am</h3>
                 </div>
-                <div class="col-9" id="eleven-entry">
-                    <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="eleven-entry">
+                    <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                   <button class="lock btn btn-dark" value="unlocked">
@@ -97,8 +97,8 @@
                 <div class="col-1">
                     <h3>12:00pm</h3>
                 </div>
-                <div class="col-9" id="twelve-entry">
-                    <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="twelve-entry">
+                    <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                   <button class="lock btn btn-dark" value="unlocked">
@@ -112,8 +112,8 @@
                 <div class="col-1">
                     <h3>1:00pm</h3>
                 </div>
-                <div class="col-9" id="one-entry">
-                    <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="one-entry">
+                    <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                   <button class="lock btn btn-dark" value="unlocked">
@@ -127,8 +127,8 @@
                 <div class="col-1">
                     <h3>2:00pm</h3>
                 </div>
-                <div class="col-9" id="two-entry">
-                    <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="two-entry">
+                    <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                   <button class="lock btn btn-dark" value="unlocked">
@@ -142,8 +142,8 @@
                 <div class="col-1">
                     <h3>3:00pm</h3>
                 </div>
-                <div class="col-9" id="three-entry">
-                    <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="three-entry">
+                    <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                   <button class="lock btn btn-dark" value="unlocked">
@@ -157,8 +157,8 @@
                 <div class="col-1">
                     <h3>4:00pm</h3>
                 </div>
-                <div class="col-9" id="four-entry">
-                    <p contentEditable="true">This is an entry</p>
+                <div class="col-9 event-entry" id="four-entry">
+                    <p contentEditable="true"></p>
                 </div>
                 <div class="col-2">
                   <button class="lock btn btn-dark" value="unlocked">
