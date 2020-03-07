@@ -14,29 +14,21 @@ function renderTime() {
 }
 
 function liveTime() {
-  timeNow.textContent = moment().format("MMMM Do YYYY, h:mm a");
+  timeNow.textContent =
+    moment().format("dddd") + " " + moment().format("MMMM Do YYYY, h:mm a");
   setInterval(liveTime, 30000);
 }
 
 function hourColour() {
   $(".time-block").each(function() {
     const now = parseInt(moment().format("H"));
-    const span = parseInt($(".time-block").attr("data-time"));
+    const span = parseInt($(this).attr("data-time"));
     if (span < now) {
-      $(".time-block").attr(
-        "class",
-        "alert-danger alert text-center time-block"
-      );
+      $(this).attr("class", "alert-danger alert text-center time-block");
     } else if (now == span) {
-      $(".time-block").attr(
-        "class",
-        "alert-primary alert text-center time-block"
-      );
+      $(this).attr("class", "alert-primary alert text-center time-block");
     } else {
-      $(".time-block").attr(
-        "class",
-        "alert-success alert text-center time-block"
-      );
+      $(this).attr("class", "alert-success alert text-center time-block");
     }
   });
 }
@@ -50,7 +42,7 @@ function renderEvents() {
       .attr("data-time");
     var lock = $(this)
       .next()
-      .children();
+      .children("lock");
     if (
       storedEvents.hasOwnProperty(dataTime) === true &&
       storedEvents[dataTime] !== ""
@@ -78,16 +70,12 @@ displayStoredEvents();
 
 $(".lock").on("click", function() {
   var eventTime = $(this)
-    .parent()
-    .parent()
-    .parent()
+    .closest(".time-block")
     .attr("data-time");
-
   if ($(this).attr("value") == "locked") {
     $(this).attr("value", "unlocked");
     $(this).html('<i class="fa fa-unlock"></i>');
     $(".event-entry").attr("contentEditable", "true");
-    clearEntry();
   } else {
     $(this).attr("value", "locked");
     $(this).html('<i class="fa fa-lock"></i>');
@@ -102,11 +90,29 @@ $(".lock").on("click", function() {
   }
 });
 
-function clearEntry() {
-  console.log("clear entry fired");
-}
+$(".clear").on("click", function() {
+  var eventTime = $(this)
+    .closest(".time-block")
+    .attr("data-time");
+  console.log(
+    $(this)
+      .prev()
+      .attr("value")
+  );
+  if (
+    $(this)
+      .prev()
+      .attr("value") === "unlocked"
+  ) {
+    $(this)
+      .parent()
+      .prev()
+      .empty();
+    storedEvents[eventTime] = "";
+    storeEntry();
+  }
+});
 
 function storeEntry() {
   localStorage.setItem("storedEvents", JSON.stringify(storedEvents));
-  console.log("store entry fired");
 }

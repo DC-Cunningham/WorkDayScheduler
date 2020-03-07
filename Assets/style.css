@@ -1,7 +1,12 @@
+.jumbotron {
+  width: 80%;
+  margin: 0 auto;
+}
+
 #time-of-day {
   width: 80%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 #event-input {
   width: 80%;
