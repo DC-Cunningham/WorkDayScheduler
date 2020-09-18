@@ -1,8 +1,8 @@
 ## Work Day Scheduler
 
-# Project to utilise javascript, jquery and third party wep API's
+# Project to utilise javascript, jquery and third party web API's
 
-The aim of this project was to create a browser window that could store a days planner. By utilising [moment.js](https://momentjs.com/) to provide the current time all hour block render as;
+The aim of this project was to create a browser window that could store a days planner. By utilising [moment.js](https://momentjs.com/) to provide the current time all hour blocks render as;
 
 - red for previous hours,
 - blue for the current hour,
