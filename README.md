@@ -13,11 +13,11 @@ By pressing the trash icon the entry is cleared from the screen and also the loc
 
 ## Screenshot of deployed application
 
-![Screenshot of application](https://raw.githubusercontent.com/DCRevResLabs/WorkDayScheduler/master/Assets/Images/WorkDaySchedulerSS.png)
+![Screenshot of application](https://raw.githubusercontent.com/DC-Cunningham/WorkDayScheduler/master/Assets/Images/WorkDaySchedulerSS.png)
 
 ## Link to deployed Application
 
-[Responsive Portfolio](https://dcrevreslabs.github.io/WorkDayScheduler/)
+[Responsive Portfolio](https://dc-cunningham.github.io/WorkDayScheduler/)
 
 ## License
 
